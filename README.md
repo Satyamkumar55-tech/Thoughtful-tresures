@@ -2,6 +2,9 @@
 
 An elegant, modern, and responsive e-commerce landing page for a premium gift hamper brand. Designed with a warm, minimalist aesthetic to provide a delightful shopping experience.
 
+**Live Demo:** [https://thoughtful-tresures.vercel.app/](https://thoughtful-tresures.vercel.app/)
+
+
 ## ✨ Features
 
 - **Hero Banner:** A captivating first look at our collection.
