@@ -29,6 +29,11 @@
                     <li class="nav-item"><a href="#categories" class="nav-link">Categories</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item cart-item">
+                        <a href="#" class="nav-link cart-icon" id="cart-icon">
+                            🛒 <span id="cart-count" class="cart-count">0</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -72,7 +77,10 @@
                             <p class="card-desc">A premium assortment of artisanal chocolates, scented candles, and fine wine.</p>
                             <div class="card-footer">
                                 <span class="card-price">$120.00</span>
-                                <button class="btn btn-sm btn-outline">View Details</button>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-sm btn-outline">View</button>
+                                    <button class="btn btn-sm btn-primary">Add to Cart</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -86,7 +94,10 @@
                             <p class="card-desc">Rejuvenate with organic bath salts, lavender oils, and plush bamboo towels.</p>
                             <div class="card-footer">
                                 <span class="card-price">$85.00</span>
-                                <button class="btn btn-sm btn-outline">View Details</button>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-sm btn-outline">View</button>
+                                    <button class="btn btn-sm btn-primary">Add to Cart</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -100,7 +111,62 @@
                             <p class="card-desc">An indulgence of truffles, imported cheeses, and premium roasted coffee.</p>
                             <div class="card-footer">
                                 <span class="card-price">$95.00</span>
-                                <button class="btn btn-sm btn-outline">View Details</button>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-sm btn-outline">View</button>
+                                    <button class="btn btn-sm btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hamper 4 -->
+                    <div class="card hamper-card fade-up">
+                        <div class="card-img-wrapper">
+                            <img src="assets/category_birthday.jpg" alt="Birthday Bliss Box" class="card-img lazy-load">
+                            <div class="card-badge">New Arrival</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Birthday Bliss Box</h3>
+                            <p class="card-desc">Celebrate with colorful confetti, gourmet cake pops, and a personalized mug.</p>
+                            <div class="card-footer">
+                                <span class="card-price">$65.00</span>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-sm btn-outline">View</button>
+                                    <button class="btn btn-sm btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hamper 5 -->
+                    <div class="card hamper-card fade-up delay-1">
+                        <div class="card-img-wrapper">
+                            <img src="assets/category_festive.jpg" alt="Festive Joy Hamper" class="card-img lazy-load">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Festive Joy Hamper</h3>
+                            <p class="card-desc">A rich blend of traditional sweets, decorative diyas, and savory snacks.</p>
+                            <div class="card-footer">
+                                <span class="card-price">$75.00</span>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-sm btn-outline">View</button>
+                                    <button class="btn btn-sm btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hamper 6 -->
+                    <div class="card hamper-card fade-up delay-2">
+                        <div class="card-img-wrapper">
+                            <img src="assets/category_corporate.jpg" alt="Executive Collection" class="card-img lazy-load">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Executive Collection</h3>
+                            <p class="card-desc">Premium notebooks, artisan tea, and elegantly crafted desk accessories.</p>
+                            <div class="card-footer">
+                                <span class="card-price">$110.00</span>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-sm btn-outline">View</button>
+                                    <button class="btn btn-sm btn-primary">Add to Cart</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -242,6 +308,58 @@
         </div>
     </footer>
 
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-image-col">
+                    <img src="" alt="Product Image" id="modal-img">
+                </div>
+                <div class="modal-info-col">
+                    <div class="modal-badge" id="modal-badge">Best Seller</div>
+                    <h2 class="modal-title" id="modal-title">Product Title</h2>
+                    <p class="modal-price" id="modal-price">$0.00</p>
+                    <div class="modal-divider"></div>
+                    <p class="modal-desc" id="modal-desc">Product description goes here.</p>
+                    
+                    <div class="modal-extra-details">
+                        <h4>What's inside:</h4>
+                        <ul id="modal-features">
+                            <li>Premium quality selection</li>
+                            <li>Beautifully packaged in signature box</li>
+                            <li>Personalized handwritten greeting card</li>
+                            <li>Express delivery & careful handling</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block mt-4" id="modal-add-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Cart</h3>
+            <button class="cart-drawer-close" id="cart-drawer-close">&times;</button>
+        </div>
+        <div class="cart-drawer-items" id="cart-drawer-items">
+            <!-- Items will be injected here -->
+            <div class="cart-empty-msg">Your cart is empty</div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block">Proceed to Checkout</button>
+        </div>
+    </div>
+
     <script type="module" src="/script.js"></script>
+    <div id="toast-container" class="toast-container"></div>
 </body>
 </html>
